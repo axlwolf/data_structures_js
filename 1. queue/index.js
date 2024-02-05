@@ -21,9 +21,7 @@ const QueueFactory = () => {
   /* This will simply return the length of the list */
   const size = () => items.length;
   /* Check the entire list */
-  const queue = () => {
-    [...items];
-  };
+  const queue = () => ({ ...items });
   /* Print queue */
   const print = () => {
     console.log({ ...items });
@@ -48,7 +46,7 @@ myQueue.enqueue(6);
 myQueue.enqueue("que paso");
 
 // console.log(myQueue.front()); // 3
-// myQueue.queue(); // 3,2,6
+console.log(myQueue.queue()); // 3,2,6
 // myQueue.print(); // 3,2,6
 
 // console.log(myQueue.dequeue()); // 3
